@@ -1,0 +1,30 @@
+db_column|display_name|display_name_e|type|example
+company_name|企業名|Company name|str|雪国まいたけ
+homepage|ホームページ|Homepage|str|https://www.maitake.co.jp/
+code|証券コード|Stock code|str|1375
+segment|市場区分|Market segment|str|東証プライム
+score|スコア|Score|int|2
+growth|成長性|Growth|int|1
+profitability|収益性|Profitability|int|4
+stability|安全性|Stability|int|2
+size|規模|Size|int|1
+underprice|割安度|Underprice|int|2
+rise|値上がり|Rise|int|2
+category|業種|Category|str|食品
+feature|特色|Feature|str|マイタケ、マッシュルーム軸にキノコ量産。外食・中食業者へ提案営業。神明HDと西日本開拓
+consolidated_business|連結事業|Consolidated business|str|まいたけ58、エリンギ10、ぶなしめじ20、茸他11、他1 <23.3>
+current|株価|Stock price|str|997.0
+market_capitalization|時価総額|Market capitalization|str|397億円
+minimum_purchase_price|最低購入金額|Minimum purchase price|str|9.97万円
+trading_unit|売買単位|Trading unit|str|100株
+turnover|売買代金|Turnover|str|436百万円
+volume|出来高|Volume|str|"441,100株"
+estimate_per|予想PER|Estimate PER|str|47.47倍
+pbr|実績PBR|PBR|str|3.81倍
+expected_dividend_yield|予想配当利回り|Expected dividend yield|str|0.20%
+net_assets_per_share|1株純資産|Net assets per share|str|269.2円 (261.1円)
+stock_holding_ratio|自己株保有率|Stock holding ratio|str|0.0%             (2023/09/30)
+year_high|年初来高値|Year high|str|1057.0円 (2023/03/07)
+year_low|年初来安値|Year low|str|867.0円 (2023/08/21)
+stock_rise_ratio|年初来株価上昇率|Stock rise ratio|str|-1.1%
+macd|200日移動平均乖離率|MACD|str|+6.4%

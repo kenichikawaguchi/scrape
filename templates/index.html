@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>東証情報</title>
+{% endblock %}
+{% block content %}
+<h1>東証情報</h1>
+
+<h1>一覧</h1>
+    {{ pagination.links }}
+    <table>
+    {% for item in params %}
+        <tr class="tr-border">
+            <th>企業名</th>
+            <td>{{ item.company_name }}</th>
+            <th>特色</th>
+            <td>{{ item.feature }}</th>
+        </tr>
+        <tr>
+            <th>証券コード</th>
+            <td>{{ item.code }}</th>
+            <th>連結事業</th>
+            <td>{{ item.consolidated_business }}</th>
+        </tr>
+        <tr>
+            <th>Webサイト</th>
+            <td><a href="{{ item.website }}">{{ item.website }}</a></th>
+        </tr>
+        <tr>
+            <th>株価</th>
+            <td>{{ item.current }}</th>
+        </tr>
+        <tr>
+            <th>市場区分</th>
+            <td>{{ item.segment }}</th>
+        </tr>
+        <tr>
+            <th>スコア</th>
+            <td>{{ item.score }}</th>
+        </tr>
+        <tr>
+            <th>成長性</th>
+            <td>{{ item.growth }}</th>
+        </tr>
+        <tr>
+            <th>収益性</th>
+            <td>{{ item.profitability }}</th>
+        </tr>
+        <tr>
+            <th>安全性</th>
+            <td>{{ item.stability }}</th>
+        </tr>
+        <tr>
+            <th>規模</th>
+            <td>{{ item.size }}</th>
+        </tr>
+        <tr>
+            <th>時価総額</th>
+            <td>{{ item.market_capitalization }}</th>
+        </tr>
+        <tr>
+            <th>最低購入金額</th>
+            <td>{{ item.minimum_purchase_price }}</th>
+        </tr>
+        <tr>
+            <th>売買単位</th>
+            <td>{{ item.trading_unit }}</th>
+        </tr>
+        <tr>
+            <th>売買代金</th>
+            <td>{{ item.turnover }}</th>
+        </tr>
+        <tr>
+            <th>出来高</th>
+            <td>{{ item.volume }}</th>
+        </tr>
+    {% endfor %}
+    </table>
+    {{ pagination.links }}
+{% endblock %}

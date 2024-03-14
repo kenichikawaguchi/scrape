@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>東証情報</title>
+{% endblock %}
+{% block content %}
+<h1>東証情報</h1>
+
+<h1>一覧</h1>
+    {{ pagination.links }}
+    <table>
+    {% for item in params %}
+        <tr class="tr-border">
+            <th>企業名</th>
+            <td>{{ item.company_name }}</th>
+            <th>証券コード</th>
+            <td>{{ item.code }}</th>
+            <th>株価</th>
+            <td>{{ item.current }}</th>
+            <th>市場区分</th>
+            <td>{{ item.segment }}</th>
+            <th>更新時刻</th>
+            <td>{{ item.updated_at }}</th>
+        </tr>
+    {% endfor %}
+    </table>
+    {{ pagination.links }}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>リスト</title>
+{% endblock %}
+
+{% block content %}
+<h1>記事一覧</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th>傾向</th>
+      <th>スコア</th>
+      <th>作成日時</th>
+      <th>機能</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for article in articles %}
+    <tr>
+      <th>{{ article['ID'] }}</th>
+      <th>{{ article['TITLE'] }}</th>
+      <th>{{ article['CONTENT'] }}</th>
+      <th>{{ article['PONE'] }}</th>
+      <th>{{ article['SCORE'] }}</th>
+      <th>{{ article['DATE'] }}</th>
+      <th>
+        <a href="{{ url_for('delete_article', id=article['ID']) }}">削除</a>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
